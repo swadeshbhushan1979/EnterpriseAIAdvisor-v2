@@ -5,7 +5,7 @@ Version 2.0
 
 from fastmcp import FastMCP
 
-from jira_client import JiraClient
+from jira_mcp.jira_client import JiraClient
 
 jira = JiraClient()
 
