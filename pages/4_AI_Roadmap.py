@@ -1,7 +1,7 @@
 import streamlit as st
 
 from services.roadmap_ai_service import generate_roadmap
-from jira_mcp.client import create_task_sync
+#from jira_mcp.client import create_task_sync
 
 st.set_page_config(
     page_title="AI Roadmap",
@@ -178,7 +178,7 @@ if st.button(
     "🚀 Create Jira Stories",
     use_container_width=True
 ):
-
+    from jira_mcp.client import create_story_sync
     roadmap = st.session_state["roadmap"]
 
     created = []
