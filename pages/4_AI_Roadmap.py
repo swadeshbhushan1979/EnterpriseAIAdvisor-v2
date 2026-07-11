@@ -178,7 +178,7 @@ if st.button(
     "🚀 Create Jira Stories",
     use_container_width=True
 ):
-    from jira_mcp.client import create_story_sync
+    from jira_mcp.client import create_task_sync
     roadmap = st.session_state["roadmap"]
 
     created = []
