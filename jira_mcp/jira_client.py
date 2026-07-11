@@ -6,7 +6,7 @@ Version 2.0
 import requests
 from requests.auth import HTTPBasicAuth
 
-from config import Config
+from jira_mcp.config import Config
 
 
 class JiraClient:
