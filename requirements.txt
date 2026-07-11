@@ -56,3 +56,5 @@ urllib3==2.7.0
 uvicorn==0.50.2
 websockets==16.0
 xlsxwriter==3.2.9
+fastmcp>=3.4.4
+mcp>=1.28.1
