@@ -1,5 +1,5 @@
 from fastmcp import FastMCP
-from jira_client import JiraClient
+from jira_mcp.jira_client import JiraClient
 
 jira = JiraClient()
 
@@ -46,3 +46,5 @@ def create_story(
         issue_type="Task"
 
     )
+if __name__ == "__main__":
+    mcp.run()
