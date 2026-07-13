@@ -1,20 +1,31 @@
 import asyncio
 import os
 
-from fastmcp import Client
-from fastmcp.client.transports import StdioTransport
+print("=" * 80)
+print("CUSTOM CLIENT.PY LOADED")
+print("FILE:", __file__)
+print("=" * 80)
+
+from fastmcp import Client, __version__
+#from fastmcp.client.transports import StdioTransport
 
 SERVER_FILE = os.path.join(
     os.path.dirname(__file__),
     "server.py"
 )
 
-transport = StdioTransport(
-    command="fastmcp",
-    args=["run", SERVER_FILE]
-)
+# transport = StdioTransport(
+#     command="fastmcp",
+#     args=["run", SERVER_FILE]
+# )
 
-client = Client(transport)
+print("FastMCP Version:", __version__)
+
+client = Client("https://jira-mcp-server-ckgn.onrender.com/mcp")
+
+print("CLIENT CREATED")
+
+#client = Client(transport)
 
 
 async def create_task(summary, description):
